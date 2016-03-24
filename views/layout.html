@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-cloak>
+<head>
+	<!-- Page Meta -->
+	<title>Contact Manager</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="keywords" content="contacts, manager">
+	<meta name="description" content="Contacts manager app">
+
+	<meta property="fb:app_id" content="APP_ID">
+	<meta property="og:title" content="Contact Manager">
+	<meta property="og:description" content="Contact manager app">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="PAGE_URL">
+	<meta property="og:image" content="LOGO_URL">
+	<meta property="og:site_name" content="Contact Manager">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	
+	<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/lib/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="/javascripts/main.js"></script>
+</head>
+<body>
+	<section class="header-wrapper" ng-include="headerUrl"></section>
+	{% block content%} {% endblock %}
+</body>
+</html>

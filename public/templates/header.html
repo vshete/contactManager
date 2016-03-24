@@ -1,0 +1,108 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<section class="page-header" ng-controller="HeaderController">
+	<!-- <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header"> 
+	    	<button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed" data-toggle="collapse" data-target="#menu-items" aria-expanded="false" uib-collapse>
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+      		</button>
+	      	<a class="navbar-brand" ui-sref="home">LOGO</a>
+	    </div>
+	    <div class="collapse navbar-collapse hidden-menu visible-xs" id="menu-items">
+	      <ul class="nav navbar-nav" uib-collapse="!isCollapsed">
+	        <li><a href="#" ng-click="isCollapsed = !isCollapsed">Dashboard</a></li>
+	        <li class="active"><a href="#" ng-click="isCollapsed = !isCollapsed">Contacts<span class="sr-only">(current)</span></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav> -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle for-mobile" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" ui-sref="home">LOGO</a>
+      </div>
+    
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed &amp;&amp; 'in'" ng-click="navCollapsed = true">
+        <ul class="nav navbar-nav">
+          <li class="for-mobile"><a href="#">Dashboard</a></li>
+          <li class="active for-mobile"><a href="#">Contacts</a></li>          
+        </ul>
+      </div>
+    </nav>
+</section>
+<section class="panel-left">
+	<ul class="panel-links nav nav-pills nav-stacked">
+		<li class="panel-link"><a href="#">Dashboard</a></li>
+		<li class="panel-link active"><a href="#">Contacts</a></li>
+	</ul>
+</section>
+<style type="text/css">
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+	a, a:hover, a:visited, a:focus {
+		color: inherit;
+		text-decoration: none;
+	}
+	ul {
+		padding: 0
+	}
+	li {
+		list-style-type: none;
+	}
+
+	td, th {
+		text-align: center;
+	}
+	.page-header nav {
+		background-color: #CCCCCC;
+		border-bottom: none;
+	}
+	.navbar-brand {
+		color: #000000 !important;
+	}
+	.for-mobile {
+		display: none !important;
+	}
+	.panel-left {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 150px;
+		height: 100%;
+		background-color: #4C4437;
+		color: #FFFFFF;
+		padding-top: 200px;
+	}
+	.panel-link {
+		text-align: center;
+		font-size: 18px;
+	}
+	.panel-link:hover {
+		color: #000000;
+	}
+
+	.panel-links > .active > a {
+		background-color: #EEEEEE !important;
+		color: #000000 !important;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.panel-left {
+			display: none;
+		}
+		.for-mobile {
+			display: block !important;
+		}
+	}
+</style>

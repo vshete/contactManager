@@ -1,0 +1,161 @@
+<section ng-controller="HomeController" class="container-fluid">	
+	<section class="list-viewport">
+		<h3 class="list-title">Contact list</h3>
+
+		<div class="form-group quick-find-wrapper">
+		    <div class="query-label">
+		    	<label for="query">Quick find contact:</label>
+		    </div>
+		    <div class="input-wrapper">
+		    	<input ng-change="find()" type="text" ng-model="query" class="form-control query" id="query" placeholder="Type here">
+		    </div>
+		    <div class="add-contact-wrapper">
+		    	<button class="btn btn-default" ui-sref="contactform">Add Contact</button>
+		    </div>
+	  	</div>
+	  	<div class="contact-table-wrapper">
+	  		<table class="table table-bordered contact-table" ng-show="query.trim().length == 0">
+			  <tr>
+			  	<th>#</th>
+			  	<th>Name</th>
+			  	<th>Email Address</th>
+			  	<th>Contact No.</th>
+			  </tr>
+			  <tr ng-repeat="contact in pages[currentPage]" ng-class-odd="'odd-row'">
+			  	<td>{{contact.idx}}</td>
+			  	<td>{{contact.firstName + ' ' + contact.lastName}}</td>
+			  	<td>
+			  		<div ng-repeat="email in contact.emails">
+			  			<span>{{email.type}}:&nbsp;</span>
+			  			<span>{{email.email}}</span>
+			  		</div>
+			  	</td>
+			  	<td>
+			  		<div ng-repeat="phone in contact.contacts">
+			  			<span>{{phone.type}}:&nbsp;</span>
+			  			<span>{{phone.contact}}</span>
+			  		</div>
+			  	</td>
+			  </tr>
+			</table>
+	  	</div>
+
+	  	<div class="search-results-wrapper">
+	  		<div class="no-matches" ng-show="query.trim().length > 0 && results.length == 0">No matches found for your search.</div>
+	  		<div class="contact-table-wrapper">
+				<table class="table table-bordered contact-table" ng-show="results.length > 0">
+				  <tr>
+				  	<th>#</th>
+				  	<th>Name</th>
+				  	<th>Email Address</th>
+				  	<th>Contact No.</th>
+				  </tr>
+				  <tr ng-repeat="contact in results" ng-class-odd="'odd-row'">
+				  	<td>{{contact.idx}}</td>
+				  	<td>{{contact.firstName + ' ' + contact.lastName}}</td>
+				  	<td>
+				  		<div ng-repeat="email in contact.emails">
+				  			<span>{{email.type}} :&nbsp;</span>
+				  			<span>{{email.email}}</span>
+				  		</div>
+				  	</td>
+				  	<td>
+				  		<div ng-repeat="phone in contact.contacts">
+				  			<span>{{phone.type}} :&nbsp;</span>
+				  			<span>{{phone.contact}}</span>
+				  		</div>
+				  	</td>
+				  </tr>
+				</table>
+			</div>
+	  	</div>
+
+		<div ng-hide="results.length > 0">
+			<nav>
+			  <ul class="pagination">
+			    <li>
+			      <a href="#" aria-label="Previous" ng-click="turnPage(currentPage - 1)">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li ng-class="{active: idx == currentPage}" ng-repeat="(idx, page) in pages"><a href="#" ng-click="turnPage(idx)">{{idx + 1}}</a></li>
+			    <li>
+			      <a href="#" aria-label="Next" ng-click="turnPage(currentPage + 1)">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+	</section>
+</section>
+<style type="text/css">
+	td, th, td > div {
+		word-wrap: break-word;
+	}
+	.list-viewport {
+		margin-left: 150px;
+	}
+	.list-title {
+		font-weight: bold;
+		margin: 25px;
+		border-bottom: 1px solid #000000;
+		padding-bottom: 10px;
+	}
+	.quick-find-wrapper {
+		margin: 10px 20px;
+	}
+	.quick-find-wrapper > div {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px;
+	}
+	.quick-find-wrapper label {
+		font-size: 16px;
+	}
+	.query {
+		width: 400px;
+	}
+	.add-contact-wrapper {
+		float: right;
+	}
+	.add-contact-wrapper button, .add-contact-wrapper button:hover {
+		background-color: #848484;
+		color: #FFFFFF;
+	}
+	.contact-table-wrapper {
+		clear: both;
+		margin: 25px;
+	}
+
+	.odd-row {
+		background-color: #EEEEEE;
+	}
+	.pagination {
+		float: right;
+		margin-right: 25px;
+	}
+
+	/* Media queries */
+	@media only screen and (min-width: 801px) and (max-width: 900px) {
+		.query {
+			width: 300px;
+		}
+	}
+	@media only screen and (max-width: 800px) {
+		.query {
+			width: 200px;
+		}
+	}
+	@media only screen and (max-width: 700px) {
+		.list-viewport {
+			margin: 0;
+		}
+	}
+	@media only screen and (max-width: 550px) {
+		.list-viewport {
+			margin: 0;
+		}
+	}
+
+</style>

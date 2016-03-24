@@ -1,0 +1,164 @@
+<section ng-controller="ContactController">
+	<section class="form-viewport">
+		<h3 class="form-title">Contact Form</h3>
+		<div class="form-area">
+			<div class="form-wrapper">
+				<form ng-submit="save()">
+				  <div class="form-group">
+			  		<label for="firstName" class="field-label">First Name:</label>
+			  		<input type="text" ng-model="contact.firstName" class="form-control field" id="firstName" placeholder="First Name">
+				  </div>
+				  <div class="form-group">
+				    <label class="field-label" for="lastName">Last Name:</label>
+				    <input type="text" ng-model="contact.lastName" class="form-control field" id="lastName" placeholder="Last Name">
+				  </div>
+				  <div class="form-group email-label-wrapper">
+				  	<label class="field-label">Email:</label>
+				  	<span class="glyphicon glyphicon-plus add-email" ng-click="add('email')"></span>
+				  </div>
+				  <div id="email-container"></div>
+				  <div class="form-group contact-label-wrapper">
+				  	<label class="field-label">Contact:</label>
+				  	<span class="glyphicon glyphicon-plus add-contact" ng-click="add('contact')"></span>
+				  </div>
+				  <div id="contact-container"></div>
+				  <button type="submit" class="btn btn-default">Save</button>
+				</form>
+			</div>
+		</div>
+		<div class="email-sample">
+			<select class="form-control email-type">
+				<option value="work" selected>work</option>
+				<option value="personal">personal</option>
+			</select>
+			<input type="email" class="form-control email-input" placeholder="Email" />
+			<span ng-controller="ContactController" class="glyphicon glyphicon-remove remove-email" ng-click="remove($event)" compile></span>
+		</div>
+		<div class="contact-sample">
+			<select class="form-control contact-type">
+				<option value="work" selected>work</option>
+				<option value="personal">personal</option>
+			</select>
+			<input type="text" class="form-control contact-input" placeholder="Contact number" />
+			<span class="glyphicon glyphicon-remove remove-contact" ng-click="remove($event)"></span>
+		</div>
+	</section>
+</section>
+<style type="text/css">
+	.form-viewport {
+		margin-left: 150px;
+	}
+	.form-title {
+		font-weight: bold;
+		margin: 25px;
+		border-bottom: 1px solid #000000;
+		padding-bottom: 10px;
+		color: #000000;
+	}
+	.form-area {
+		overflow: hidden;
+		margin: 25px;
+		background-color: #E4E4E4;
+	}
+	.form-wrapper {
+		margin: 50px 100px;
+		width: 600px;
+	}
+	.field-label, .field {
+		display: inline-block;
+	}
+	.field-label {
+		width: 150px;
+	}
+	.field {
+		width: 400px;
+	}
+	.email-sample, .contact-sample {
+		display: none;
+	}
+	.email-label-wrapper, .contact-label-wrapper {
+		border-bottom: 1px solid #CCCCCC; 
+		padding-bottom: 10px;
+	}
+	.email, .contact {
+		margin: 10px 0;
+	}
+	.add-email, .remove-email, .add-contact, .remove-contact {
+		color: #999999;
+		cursor: pointer;
+	}
+	.add-email, .add-contact {
+		margin-left: 25px;
+	}
+	.remove-email, .remove-contact {
+		margin-left: 10px;
+	}
+	.email-type, .email-input, .remove-email {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	.contact-type, .contact-input, .remove-contact {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	.email-type, .contact-type {
+		width: 120px;
+	}
+	.email-input, .contact-input {
+		width: 300px;
+		margin-left: 15px;
+	}
+
+	/* Media queries */
+	@media only screen and (max-width: 950px) {
+		.email-input, .contact-input {
+			width: 250px;
+			margin-left: 15px;
+		}
+		.field {
+			width: 300px;
+		}
+	}
+	@media only screen and (max-width: 950px) and (min-width: 801px) {
+		.form-wrapper {
+			margin: 50px 100px;
+			width: 500px;
+		}
+	}
+	@media only screen and (max-width: 800px) {
+		.form-wrapper {
+			margin: 50px 75px;
+			width: 400px;
+		}
+	}
+	@media only screen and (max-width: 700px) {
+		.form-viewport {
+			margin: 0;
+		}
+	}
+	@media only screen and (max-width: 550px) {
+		.email-input, .contact-input {
+			width: 150px;
+		}
+		.form-wrapper {
+			margin: 50px 50px;
+			width: 350px;
+		}
+	}
+	@media only screen and (max-width: 450px) {
+		.field {
+			width: 200px;
+		}
+		.email-input, .contact-input {
+			width: 100px;
+		}
+		.form-wrapper {
+			margin: 50px 25px;
+			width: 300px;
+		}
+		.email-type, .contact-type {
+			width: 80px;
+		}
+	}
+
+</style>

@@ -1,0 +1,172 @@
+{
+	"contacts": [
+		{		
+			"firstName": "Gopal",
+			"lastName": "Krishnan",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Hari",
+			"lastName": "Krishnan",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "mnop@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Gopal",
+			"lastName": "Ram",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Don",
+			"lastName": "Dsouza",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Gopal",
+			"lastName": "Krishnan",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Gopal",
+			"lastName": "Krishnan",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		},
+		{		
+			"firstName": "Gopal",
+			"lastName": "Krishnan",
+			"emails": [
+				{
+					"type": "work",
+					"email": "abcd@domain.com"
+				},
+				{
+					"type": "personal",
+					"email": "abcd@domain.com"
+				}
+			],
+			"contacts": [
+				{	
+					"type": "work",
+					"contact": "044 432102"
+				},
+				{	
+					"type": "personal",
+					"contact": "9876543210"
+				}
+			]
+		}		
+	]
+}

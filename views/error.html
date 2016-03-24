@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div>Message: {{message}}</div>
+<div>StackTrace:</div>
+<div>{{stack}}</div>
+<div>Error:</div>
+<div>{{error|json}}</div>
+<!-- {% for x in error %}
+<div>{{loop.key}}: {{x}}</div>
+{% endfor %}  -->
+{% endblock %}
