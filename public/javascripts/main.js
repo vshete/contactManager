@@ -33,7 +33,6 @@ app.factory('$contacts', function($http) {
     if(contacts) {
       contact.idx = contacts.length + 1;
       contacts.push(contact);
-      console.log(contacts.length);
       sessionStorage.contacts = angular.toJson(contacts);  
     } else {
       contacts = [];
