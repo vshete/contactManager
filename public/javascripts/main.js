@@ -173,7 +173,7 @@ app.controller('ContactController', function($scope, $contacts, $state, $compile
     } else {
       angular.element(el.children()[0]).attr('ng-model', 'contact.contacts[' + $scope.contactCount + ']["type"]');
       angular.element(el.children()[1]).attr('ng-model', 'contact.contacts[' + $scope.contactCount + ']["contact"]');
-      $scope.emailCount++;
+      $scope.contactCount++;
     }
     parent.append(el);
     
